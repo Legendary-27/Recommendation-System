@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html style="height:100%">
+<head>
+
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <style type="text/css">
+        .nav{
+            background:#3a3a3a;
+            height:90px;
+            overflow:hidden;
+            
+        }
+        
+        .nav li{
+            list-style:none; 
+            display:inline-block;
+            text-align:center;
+            width:300px;
+        }
+        
+        .nav li a{
+            color:#fff;
+            text-decoration:none;
+        }
+        
+        .nav li a:hover{
+            color:lightblue;  
+        }
+        
+        body{
+            margin: 0px;
+    		  padding: 0px;
+            background-image:url("{% static "back.jpg" %}");       
+        }
+        {% block css %}
+                
+        {% endblock %}
+    </style>
+</head>
+<body style="height:100%">
+    <div class="nav">
+            <ul>
+                <li><a href="{% url 'cms:cms_index' %}"><h1><b>新闻推荐系统后台</b></h1></a></li>
+                <li><a href="{% url 'cms:cms_index' %}"><b>首页</b></a></li>
+                <li><a href="{% url 'cms:news_add' %}"><b>发布新闻</b></a></li>
+                <li><a href="{% url 'cms:logout' %}"><b>退出登录</b></a></li>
+            </ul>
+    </div>
+        {% block content %}
+                
+        {% endblock %}
+</body>
+</html>
