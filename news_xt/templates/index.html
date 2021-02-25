@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+    {{ block.super }}
+	<div class="case">
+		<div class="box">
+			<p style="font-size:20px;color:#FFFFFF">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp>>猜你喜欢</p>
+			<ul class="case-list">
+				{% for item in news_recommend %}
+				<li>
+					<a href="{% url 'front:view' news_id=item.0.0 %}" target="_black">
+						<div class="case_title">
+							<div class="t1">{{ item.0.2 }}&nbsp&nbsp({{ item.0.1 }}&nbsp&nbsp{{ item.0.5 }})</div>
+						</div>
+					</a>
+				</li>
+            {% endfor %}
+			</ul>
+		</div>
+	</div >
+    
+
+{% endblock %}

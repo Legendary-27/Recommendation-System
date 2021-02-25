@@ -1,0 +1,38 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>注册</title>
+        <style type="text/css">
+            .box1{width:500px;height:300px;padding-top:0px; margin:120px auto;background:rgba(190,190,190,0.5);}
+            .t2{width:500px;margin:10px 180px;}
+            .box2{width:440px;height:25px;padding:8px;valign:center;}
+            .box3{width:500px;height:25px;padding:17px 100px;}
+            .box4{padding:7px 150px}
+            body{background-image:url("{% static "back4.jpg" %}");}
+            a{color:Black;text-decoration:none;}
+            a:hover{color:DimGrey;}
+        </style>
+	</head>
+	<body>
+   <div class="box1"> 
+			<div class="t2"><h1 >用户注册</h1></div>	
+	    	<form action="" method="post">
+            <div class="box2">
+    				账&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp号:<input type="text" name="username" />{{ error1 }}{{ error2 }}
+            </div> 
+            <div class="box2">                                                             
+    				密&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp码:<input type="password" name="password"/>{{ error3 }}
+            </div>
+            <div class="box2">						  
+        			确认密码&nbsp:<input type="password" name="reqpassword"/>{{ error4 }}
+            </div>
+            <div class="box3">
+				  <button type="submit">注册</buttom>
+            </div>
+			</form>
+          <div class="box4">
+            <a href="{% url 'login' %}">已有账号，去登陆 ~~</input></a>
+          </div>
+    </div>
+    </body>
+</html>

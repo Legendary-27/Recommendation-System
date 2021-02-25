@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>登陆</title>
+        <style type="text/css">
+            .box1{width:500px;height:300px;padding-top:0px; margin:120px auto;background:rgba(190,190,190,0.5);}
+            .t1{width:500px;margin:10px 180px;}
+            .box2{width:500px;padding:20px;}
+            .box3{width:500px;padding:20px 90px}
+            .box4{padding:8px 150px}
+            .box5{padding:10px 650px;}
+            body{background-image:url("{% static "back3.jpg" %}");}
+            a{color:Black;text-decoration:none;}
+            a:hover{color:DimGrey;}
+        </style>
+	</head>
+	<body >
+		<div class="box1">
+        <div class="t1"><h1>用户登陆</h1></div>
+			<form action="" method="post" >
+				<div class="box2">
+				   用户名：<input type="text" name="username"/>
+				</div>
+				<div class="box2">
+					密&nbsp&nbsp&nbsp&nbsp码：<input type="password" name="password"/>{{ error }}
+				</div>
+				<div class="box3">
+					<input type="submit" id="but1" value="登陆"></input>
+					&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="reset" value="重置"></input>
+				</div>
+				<div class="box4">
+                <a href="{% url 'cms:register' %}">还没有账号，去注册 ~~</input></a>
+					<!--<a href="${pageContext.request.contextPath}/index/index.action">返回网站主页</a>-->
+				</div>
+			</form>
+		</div>
+	</body>
+</html>

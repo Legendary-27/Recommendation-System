@@ -1,0 +1,53 @@
+.ys {
+            border:"1"; 
+            bordercolor:"#668B8B" 
+            bgcolo:"#AEEEEE"; 
+            align:"center"; 
+            width:"500px";
+            height:"50px";
+        }
+
+
+<li>
+                    <form action="{% url 'cms:cms_index' %}" method="post">
+                        <select name="news_type" size="7" value="新闻类型选择">
+                            <label for="category" >新闻类型</label>
+                            <option value="cms_keji" selected>科技</option>
+                            <option value="cms_yule" selected>娱乐</option>
+                            <option value="cms_caijing" selected>财经</option>
+                            <option value="cms_junshi" selected>军事</option>
+                            <option value="cms_shehui" selected>社会</option>
+                            <option value="cms_guoji" selected>国际</option>
+                            <option value="cms_shuping" selected>书评</option>
+                        </select>
+                    </form>
+                </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

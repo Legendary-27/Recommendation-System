@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="case">
+<div style="margin-top:20px;">
+    <table border="1" align="center" width="800px" height="50px" color="#FFFFFF">
+        <thead align="center" >
+            <th>标题</th>
+            <th>发布时间</th>
+            <th>新闻类别</th>
+            <th>浏览量</th>
+        </thead>
+        <tbody>
+            <tr align="center">
+                <td style="color:#FFFFFF">{{ view_news.0.2 }}</td>
+                <td style="color:#FFFFFF">{{ view_news.0.3 }}</td>
+                <td style="color:#FFFFFF">{{ view_news.0.1 }}</td>
+                <td style="color:#FFFFFF">{{ view_news.0.5 }}</td>
+            </tr>
+            <tr align="center" >
+                <td colspan="4" ><b>新闻详情</b></td>
+            </tr>
+            <tr >
+                <td colspan="4"><p style="color:#FFFFFF">{{ view_news.0.4 }}</p></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</class>
+{% endblock %}
+
